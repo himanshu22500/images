@@ -10,6 +10,9 @@ python = "^3.12"
 crawl4ai = "^0.4.24"
 sqlalchemy = "^2.0.36"
 psycopg2 = "^2.9.10"
+requests = "^2.32.3"
+beautifulsoup4 = "^4.12.3"
+selenium = "^4.27.1"
 
 
 [build-system]
