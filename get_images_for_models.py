@@ -24,7 +24,7 @@ mower_data = [
 {"id":"632","slug":"exmark-kawasaki-fx1000v-with-60-in-ultracut-series-6-deck","name":"Kawasaki FX1000V with 60-in UltraCut Series 6 Deck","brand_name":"Exmark","page_url":"https://www.exmark.com/mowers/stand-on/vertex/vertex-x-series/vxx999eka60600","category_page_url":"","series_page_url":"https://www.exmark.com/mowers/stand-on/vertex/"},
 {"id":"623","slug":"exmark-kawasaki-fx730v-with-48-in-ultracut-series-4-deck","name":"Kawasaki FX730V with 48-in UltraCut Series 4 Deck","brand_name":"Exmark","page_url":"https://www.exmark.com/mowers/stand-on/vertex/vertex-s-series/vxs730gka48400","category_page_url":"","series_page_url":"https://www.exmark.com/mowers/stand-on/vertex/"},
 {"id":"626","slug":"exmark-kohler-efi-ecv740-with-48-in-ultracut-series-4-deck","name":"Kohler EFI ECV740 with 48-in UltraCut Series 4 Deck","brand_name":"Exmark","page_url":"https://www.exmark.com/mowers/stand-on/vertex/vertex-s-series/vxs740ekc48400","category_page_url":"","series_page_url":"https://www.exmark.com/mowers/stand-on/vertex/"}
-] # get's images from cdn
+] # upload using the endpoint
 
 mower_data = [
 {"id":"726","slug":"dixie-chopper-zee-2-2348kw","name":"Zee 2 2348KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/zee-2/"},
@@ -60,4 +60,37 @@ mower_data = [
 {"id":"747","slug":"dixie-chopper-falcon-hpx-2454kw","name":"Falcon HPX 2454KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/falcon-hpx/"},
 {"id":"758","slug":"dixie-chopper-falcon-hp-2460kw","name":"Falcon HP 2460KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/falcon-hp/"},
 {"id":"748","slug":"dixie-chopper-falcon-hpx-2460kw","name":"Falcon HPX 2460KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/falcon-hpx/"}
-] # images not fetched.
+] # upload using the endpoint
+
+mower_data = [
+{"id":"1359","slug":"country-clipper-charger","name":"Charger","brand_name":"Country clipper","page_url":"https://www.countryclipper.com/products/commercial/charger/","category_page_url":"https://www.countryclipper.com/commercial/","series_page_url":""}
+] # upload using the endpoint
+
+mower_data = [
+{"id":"1179","slug":"worldlawn-46-in-viper-xp","name":"46-in Viper XP","brand_name":"Worldlawn","page_url":"https://worldlawn.com/viper/","category_page_url":"","series_page_url":""},
+{"id":"1187","slug":"worldlawn-52-in-king-cobra","name":"52-in King Cobra","brand_name":"Worldlawn","page_url":"https://worldlawn.com/king-cobra/","category_page_url":"","series_page_url":""},
+{"id":"1190","slug":"worldlawn-32-in-venom","name":"32-in Venom","brand_name":"Worldlawn","page_url":"https://worldlawn.com/venom/","category_page_url":"","series_page_url":""},
+{"id":"1193","slug":"worldlawn-52-in-venom","name":"52-in Venom","brand_name":"Worldlawn","page_url":"https://worldlawn.com/venom/","category_page_url":"","series_page_url":""},
+{"id":"1189","slug":"worldlawn-72-in-python","name":"72-in Python","brand_name":"Worldlawn","page_url":"https://worldlawn.com/python/","category_page_url":"","series_page_url":""},
+{"id":"1201","slug":"worldlawn-34-in-gater","name":"34-in Gater","brand_name":"Worldlawn","page_url":"https://worldlawn.com/gater/","category_page_url":"","series_page_url":""},
+{"id":"1195","slug":"worldlawn-36-in-walk-behind","name":"36-in Walk Behind","brand_name":"Worldlawn","page_url":"https://worldlawn.com/belt-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1198","slug":"worldlawn-48-in-walk-behind","name":"48-in Walk Behind","brand_name":"Worldlawn","page_url":"https://worldlawn.com/belt-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1194","slug":"worldlawn-60-in-venom","name":"60-in Venom","brand_name":"Worldlawn","page_url":"https://worldlawn.com/venom/","category_page_url":"","series_page_url":""},
+{"id":"1199","slug":"worldlawn-48-in-hydro-fixed-deck","name":"48-in Hydro Fixed Deck","brand_name":"Worldlawn","page_url":"https://worldlawn.com/hydro-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1191","slug":"worldlawn-36-in-venom","name":"36-in Venom","brand_name":"Worldlawn","page_url":"https://worldlawn.com/venom/","category_page_url":"","series_page_url":""},
+{"id":"1180","slug":"worldlawn-50-in-viper-xp","name":"50-in Viper XP","brand_name":"Worldlawn","page_url":"https://worldlawn.com/viper/","category_page_url":"","series_page_url":""},
+{"id":"1192","slug":"worldlawn-48-in-venom","name":"48-in Venom","brand_name":"Worldlawn","page_url":"https://worldlawn.com/venom/","category_page_url":"","series_page_url":""},
+{"id":"1196","slug":"worldlawn-36-in-hydro-fixed-deck","name":"36-in Hydro Fixed Deck","brand_name":"Worldlawn","page_url":"https://worldlawn.com/hydro-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1182","slug":"worldlawn-28-in-walk-behind","name":"28-in Walk Behind","brand_name":"Worldlawn","page_url":"https://worldlawn.com/belt-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1203","slug":"worldlawn-52-in-cobra","name":"52-in Cobra","brand_name":"Worldlawn","page_url":"https://worldlawn.com/cobra/","category_page_url":"","series_page_url":""},
+{"id":"1185","slug":"worldlawn-52-in-diamondback","name":"52-in Diamondback","brand_name":"Worldlawn","page_url":"https://worldlawn.com/diamondback/","category_page_url":"","series_page_url":""},
+{"id":"1204","slug":"worldlawn-60-in-cobra","name":"60-in Cobra","brand_name":"Worldlawn","page_url":"https://worldlawn.com/cobra/","category_page_url":"","series_page_url":""},
+{"id":"1183","slug":"worldlawn-32-in-walk-behind","name":"32-in Walk Behind","brand_name":"Worldlawn","page_url":"https://worldlawn.com/belt-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1197","slug":"worldlawn-36-in-hydro-floating-deck","name":"36-in Hydro Floating Deck","brand_name":"Worldlawn","page_url":"https://worldlawn.com/hydro-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1202","slug":"worldlawn-48-in-cobra","name":"48-in Cobra","brand_name":"Worldlawn","page_url":"https://worldlawn.com/cobra/","category_page_url":"","series_page_url":""},
+{"id":"1184","slug":"worldlawn-48-in-diamondback","name":"48-in Diamondback","brand_name":"Worldlawn","page_url":"https://worldlawn.com/diamondback/","category_page_url":"","series_page_url":""},
+{"id":"1200","slug":"worldlawn-48-in-hydro-floating-deck","name":"48-in Hydro Floating Deck","brand_name":"Worldlawn","page_url":"https://worldlawn.com/hydro-driven-walk-behind/","category_page_url":"","series_page_url":""},
+{"id":"1186","slug":"worldlawn-60-in-diamondback","name":"60-in Diamondback","brand_name":"Worldlawn","page_url":"https://worldlawn.com/diamondback/","category_page_url":"","series_page_url":""},
+{"id":"1188","slug":"worldlawn-60-in-king-cobra","name":"60-in King Cobra","brand_name":"Worldlawn","page_url":"https://worldlawn.com/king-cobra/","category_page_url":"","series_page_url":""},
+{"id":"1181","slug":"worldlawn-60-in-viper-xp","name":"60-in Viper XP","brand_name":"Worldlawn","page_url":"https://worldlawn.com/viper/","category_page_url":"","series_page_url":""}
+] # upload using the endpoint

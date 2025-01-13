@@ -5,13 +5,16 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import create_engine
 
-engine = create_engine('postgresql://himanshumishra:himanshumishra@localhost:5432/key_features_poc')
+engine = create_engine(
+    "postgresql://himanshumishra:himanshumishra@localhost:5432/key_features_poc"
+)
 Session = scoped_session(sessionmaker(bind=engine))
 
 Base = declarative_base()
 
+
 class KeyFeatures(Base):
-    __tablename__ = 'key_features'
+    __tablename__ = "key_features"
 
     id = Column(Integer, primary_key=True)
     model_name = Column(String, nullable=False)
@@ -25,7 +28,7 @@ class KeyFeatures(Base):
                 id=model_id,
                 model_name=model_name,
                 brand_name=brand_name,
-                key_features=key_features
+                key_features=key_features,
             )
             session.add(new_key_features_entry)
             session.commit()
@@ -40,9 +43,9 @@ class KeyFeatures(Base):
             session.commit()
 
 
-
 def create_key_features_table(engine):
     Base.metadata.create_all(engine)
+
 
 if __name__ == "__main__":
     KeyFeatures.update_key_features_to_json()
