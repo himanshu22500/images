@@ -9,39 +9,25 @@ from crawl4ai.async_configs import BrowserConfig, CrawlerRunConfig
 
 load_dotenv()
 mower_data = [
-{"id":"726","slug":"dixie-chopper-zee-2-2348kw","name":"Zee 2 2348KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/zee-2/"},
-{"id":"727","slug":"dixie-chopper-zee-2-2354kw","name":"Zee 2 2354KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/zee-2/"},
-{"id":"730","slug":"dixie-chopper-blackhawk-2454kw","name":"BlackHawk 2454KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/blackhawk/"},
-{"id":"731","slug":"dixie-chopper-blackhawk-2460kw","name":"BlackHawk 2460KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/blackhawk/"},
-{"id":"732","slug":"dixie-chopper-blackhawk-hp-2448kw","name":"BlackHawk HP 2448KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/blackhawk-hp/"},
-{"id":"733","slug":"dixie-chopper-blackhawk-hp-2454kw","name":"BlackHawk HP 2454KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/blackhawk-hp/"},
-{"id":"728","slug":"dixie-chopper-talon-r-c-2844vge","name":"Talon R/C 2844VGE","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/remote-control/talon-rc/"},
-{"id":"725","slug":"dixie-chopper-zee-2-2342kw","name":"Zee 2 2342KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/zee-2/"},
-{"id":"729","slug":"dixie-chopper-blackhawk-2448kw","name":"BlackHawk 2448KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/blackhawk/"},
-{"id":"739","slug":"dixie-chopper-classic-4072vge","name":"Classic 4072VGE","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/classic/"},
-{"id":"740","slug":"dixie-chopper-eagle-2754kw","name":"Eagle 2754KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/eagle/"},
-{"id":"734","slug":"dixie-chopper-blackhawk-hp-2460kw","name":"BlackHawk HP 2460KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/blackhawk-hp/"},
-{"id":"735","slug":"dixie-chopper-classic-2760kw","name":"Classic 2760KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/classic/"},
-{"id":"736","slug":"dixie-chopper-classic-3560kw","name":"Classic 3560KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/classic/"},
-{"id":"738","slug":"dixie-chopper-classic-3572kw","name":"Classic 3572KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/classic/"},
-{"id":"737","slug":"dixie-chopper-classic-4060vge","name":"Classic 4060VGE","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/classic/"},
-{"id":"742","slug":"dixie-chopper-eagle-hp-3560kw","name":"Eagle HP 3560KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/eagle-hp/"},
-{"id":"744","slug":"dixie-chopper-eagle-hp-3572kw","name":"Eagle HP 3572KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/eagle-hp/"},
-{"id":"745","slug":"dixie-chopper-eagle-hp-4072vge","name":"Eagle HP 4072VGE","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/eagle-hp/"},
-{"id":"743","slug":"dixie-chopper-eagle-hp-4060vge","name":"Eagle HP 4060VGE","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/eagle-hp/"},
-{"id":"756","slug":"dixie-chopper-falcon-hp-2448kw","name":"Falcon HP 2448KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/falcon-hp/"},
-{"id":"750","slug":"dixie-chopper-xcaliber-3566kw","name":"Xcaliber 3566KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/xcaliber/"},
-{"id":"752","slug":"dixie-chopper-xcaliber-3574kw","name":"Xcaliber 3574KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/xcaliber/"},
-{"id":"751","slug":"dixie-chopper-xcaliber-4066vge","name":"Xcaliber 4066VGE","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/xcaliber/"},
-{"id":"741","slug":"dixie-chopper-eagle-2760kw","name":"Eagle 2760KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/eagle/"},
-{"id":"753","slug":"dixie-chopper-xcaliber-4074vge","name":"Xcaliber 4074VGE","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/industrial/xcaliber/"},
-{"id":"754","slug":"dixie-chopper-zee-2-hp-series-2448kw","name":"Zee 2 HP Series 2448KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/zee-2-hp/"},
-{"id":"755","slug":"dixie-chopper-zee-2-hp-series-2454kw","name":"Zee 2 HP Series 2454KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/zee-2-hp/"},
-{"id":"757","slug":"dixie-chopper-falcon-hp-2454kw","name":"Falcon HP 2454KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/falcon-hp/"},
-{"id":"746","slug":"dixie-chopper-falcon-hpx-2448kw","name":"Falcon HPX 2448KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/falcon-hpx/"},
-{"id":"747","slug":"dixie-chopper-falcon-hpx-2454kw","name":"Falcon HPX 2454KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/falcon-hpx/"},
-{"id":"758","slug":"dixie-chopper-falcon-hp-2460kw","name":"Falcon HP 2460KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/residential/falcon-hp/"},
-{"id":"748","slug":"dixie-chopper-falcon-hpx-2460kw","name":"Falcon HPX 2460KW","brand_name":"Dixie Chopper","page_url":"","category_page_url":"","series_page_url":"https://www.dixiechopper.com/product-category/commercial/falcon-hpx/"}
+{"id":"1290","slug":"ryobi-p1180","name":"P1180","page_url":"https://www.ryobitools.com/products/details/46396034571","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1291","slug":"ryobi-p1190","name":"P1190","page_url":"https://www.ryobitools.com/products/details/46396034588","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1301","slug":"ryobi-ry401220","name":"RY401220","page_url":"https://www.ryobitools.com/products/details/46396040718","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1292","slug":"ryobi-ry401140","name":"RY401140","page_url":"https://www.ryobitools.com/products/details/46396036995","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1296","slug":"ryobi-ry401101","name":"RY401101","page_url":"https://www.ryobitools.com/products/details/46396045607","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1298","slug":"ryobi-ry401210","name":"RY401210","page_url":"https://www.ryobitools.com/products/details/46396040244","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1299","slug":"ryobi-ry401170","name":"RY401170","page_url":"https://www.ryobitools.com/products/details/46396037169","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1300","slug":"ryobi-ry401180","name":"RY401180","page_url":"https://www.ryobitools.com/products/details/46396037176","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1302","slug":"ryobi-ry401260","name":"RY401260","page_url":"https://www.ryobitools.com/products/details/46396045386","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1304","slug":"ryobi-ryrm8010","name":"RYRM8010","page_url":"https://www.ryobitools.com/products/details/46396040886","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1307","slug":"ryobi-ryrm8060","name":"RYRM8060","page_url":"https://www.ryobitools.com/products/details/46396041845","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1308","slug":"ryobi-ryrm8070","name":"RYRM8070","page_url":"https://www.ryobitools.com/products/details/46396041852","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1293","slug":"ryobi-ry401150","name":"RY401150","page_url":"https://www.ryobitools.com/products/details/46396036711","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1294","slug":"ryobi-ry48ztr100","name":"RY48ZTR100","page_url":"https://www.ryobitools.com/products/details/46396025395","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1295","slug":"ryobi-ry48ztr75","name":"RY48ZTR75","page_url":"https://www.ryobitools.com/products/details/46396023971","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1297","slug":"ryobi-ry401100vnm","name":"RY401100VNM","page_url":"https://www.ryobitools.com/products/details/46396027726","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1303","slug":"ryobi-rypm8010","name":"RYPM8010","page_url":"https://www.ryobitools.com/products/details/46396046468","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1305","slug":"ryobi-ryrm8021","name":"RYRM8021","page_url":"https://www.ryobitools.com/products/details/46396040923","brand_name":"Ryobi","category_page_url":"","series_page_url":""},
+{"id":"1306","slug":"ryobi-ryrm8034","name":"RYRM8034","page_url":"https://www.ryobitools.com/products/details/46396041029","brand_name":"Ryobi","category_page_url":"","series_page_url":""}
 ]
 
 
@@ -95,6 +81,19 @@ async def click_and_extract_images(
                 parsed_url = urlparse(url)
                 cleaned_url = parsed_url._replace(query="")
                 return urlunparse(cleaned_url)
+
+            def add_https(url: str) -> str:
+                if not url.startswith("https"):
+                    return "https:" + url
+                return url
+
+            def add_domain(url: str, base_url: str) -> str:
+                from urllib.parse import urlparse
+
+                domain = f"{urlparse(base_url).scheme}://{urlparse(base_url).netloc}"
+                if not url.startswith(domain):
+                    return f"{domain}{url}"
+                return url
 
             data.append(
                 {

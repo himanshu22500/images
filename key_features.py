@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-from crawl4ai import AsyncWebCrawler, CacheMode
+from crawl4ai import AsyncWebCrawler, CacheMode, CrawlerRunConfig, BrowserConfig
 
 from pydantic import BaseModel, Field
 from crawl4ai.extraction_strategy import LLMExtractionStrategy
@@ -22,6 +22,7 @@ class KeyFeature(BaseModel):
 
 
 async def extract_key_features(url: str):
+    browser_config = BrowserConfig(browser_type="chromium", headless=True)
     llm_strategy = LLMExtractionStrategy(
         provider="openai/gpt-4o",
         api_token=os.getenv("OPENAI_API_KEY"),
@@ -96,11 +97,15 @@ Rear Hitch ['Tow Hitch', 'Trailer Hitch', 'Rear Coupler']
 Blade Brake Clutch ['Blade Disengagement', 'Clutch System', 'Blade Safety Mechanism']
                 """,
     )
-    async with AsyncWebCrawler() as crawler:
+    crawler_run_config = CrawlerRunConfig(
+        wait_for_images=True, verbose=True, scan_full_page=True, scroll_delay=3,
+        extraction_strategy=llm_strategy,
+        cache_mode=CacheMode.DISABLED,
+    )
+    async with AsyncWebCrawler(config=browser_config) as crawler:
         result = await crawler.arun(
             url=url,
-            extraction_strategy=llm_strategy,
-            cache_mode=CacheMode.BYPASS,
+            config=crawler_run_config,
         )
         llm_strategy.show_usage()
         return result.extracted_content
@@ -108,69 +113,14 @@ Blade Brake Clutch ['Blade Disengagement', 'Clutch System', 'Blade Safety Mechan
 
 if __name__ == "__main__":
     models_data = [
-        {
-            "id": "97",
-            "name": "S120",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/lawn-tractors/100-series/s120-lawn-tractor/",
-        },
-        {
-            "id": "115",
-            "name": "X350, 48-in deck",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/lawn-tractors/x300-series/x350-lawn-tractor-48-in/",
-        },
-        {
-            "id": "119",
-            "name": "X380, 48-in. deck",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/lawn-tractors/x300-series/x380-lawn-tractor-48-in/",
-        },
-        {
-            "id": "157",
-            "name": "Z920M",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/commercial-mowers/commercial-zero-turn/z900-series/z920m-mower/",
-        },
-        {
-            "id": "170",
-            "name": "Z997R",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/commercial-mowers/commercial-zero-turn/z900-series/z997r-diesel-mower/",
-        },
-        {
-            "id": "35",
-            "name": "1575",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/commercial-mowers/front-mowers/1575-terraincut-mower/",
-        },
-        {
-            "id": "36",
-            "name": "1580",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/commercial-mowers/front-mowers/1580-terraincut-mower/",
-        },
-        {
-            "id": "34",
-            "name": "1570",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/commercial-mowers/front-mowers/1570-terraincut-mower/",
-        },
-        {
-            "id": "69",
-            "name": "8900A PrecisionCut",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/riding-reel-mowers/8900-precisioncut-wide-area-reel-mower/",
-        },
-        {
-            "id": "103",
-            "name": "S220",
-            "brand_name": "John Deere",
-            "page_url": "https://www.deere.com/en/mowers/lawn-tractors/200-series/s220/",
-        },
-    ]
+{"id":"193","name":"ZXS54","brand_name":"Kioti","page_url":"https://www.kioti.com/products/zero-turn-mowers/zxs/zxs54"},
+# {"id":"627","name":"Kohler EFI ECV740 with 52-in UltraCut Series 4 Deck","brand_name":"Exmark","page_url":"https://www.exmark.com/mowers/stand-on/vertex/vertex-s-series/vxs740ekc52400"},
+# {"id":"58","name":"6700A E-Cut Hybrid","brand_name":"John Deere","page_url":"https://www.deere.com/en/mowers/fairway-mowers/6700a-e-cut-hybrid-fairway-mower/"},
+# {"id":"661","name":"Revolt, 36-in deck","brand_name":"Bad Boy","page_url":"https://badboycountry.com/mowers/revolt"},
+# {"id":"192","name":"ZXS48","brand_name":"Kioti","page_url":"https://www.kioti.com/products/zero-turn-mowers/zxs/zxs48"}
+]
 
-    for model in models_data[:5]:
+    for model in models_data:
         extracted_content = asyncio.run(
             extract_key_features(
                 url=model["page_url"]
