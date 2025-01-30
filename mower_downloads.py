@@ -111,6 +111,7 @@ if __name__ == "__main__":
             page_urls["model"] = mower["page_url"]
         if mower["category_page_url"]:
             page_urls["category"] = mower["category_page_url"]
+
         if mower["series_page_url"]:
             page_urls["series"] = mower["series_page_url"]
 

@@ -29,7 +29,7 @@ async def extract_key_features(url: str):
         extraction_type="schema",
         schema=KeyFeature.model_json_schema(),
         instruction="""
-                Determine whether any feature from the list are mentioned on web page.
+Determine whether any feature from the list are mentioned on web page.
 
 Instructions:
 
